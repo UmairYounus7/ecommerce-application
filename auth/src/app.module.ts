@@ -12,9 +12,9 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 
 
-@Module({
+@Module({ 
   imports: [
-    MongooseModule.forRoot(process.env.MONGO_URI),
+    MongooseModule.forRoot('mongodb://localhost:27017/'), //process.env.MONGO_URI
     AuthModule,
     UsersModule
   ],
